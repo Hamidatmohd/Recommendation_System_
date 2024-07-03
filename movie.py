@@ -35,7 +35,7 @@ def recommend_movies(movie_name):
     similarity_score = list(enumerate(similarity[index_of_the_movie]))
     sorted_similar_movies = sorted(similarity_score, key=lambda x: x[1], reverse=True)
     recommendations = []
-    for movie in sorted_similar_movies[:6]:  # Limit recommendations
+    for movie in sorted_similar_movies[1:7]:  # Limit recommendations
         index = movie[0]
         title_from_index = movies_data[movies_data.index == index]["title"].values[0]
         recommendations.append(title_from_index)
@@ -43,7 +43,8 @@ def recommend_movies(movie_name):
 
 
 # Streamlit App
-movie_name = st.text_input("Enter movie name")
+st.title("Movie Recommendation System)
+movie_name = st.text_input("Let's recommend based on your favourite movie name")
 if st.button("Get Recommendation"):  # Added button
     if movie_name:
         recommendations = recommend_movies(movie_name)

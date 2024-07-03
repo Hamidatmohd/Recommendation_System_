@@ -1,0 +1,7 @@
+streamlit 
+pandas 
+sklearn.feature_extraction.text  
+TfidfVectorizer
+sklearn.metrics.pairwise 
+cosine_similarity
+difflib

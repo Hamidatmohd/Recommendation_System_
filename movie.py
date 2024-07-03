@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import difflib
 
 # Load movies data
-movies_data = pd.read_csv(r"C:\Users\user\Documents\TAB\movies.csv")  # Replace with your path
+movies_data = pd.read_csv("movies.csv")  # Replace with your path
 
 # Selected features
 selected_features = ["genres", "keywords", "tagline", "cast", "director"]

@@ -43,7 +43,7 @@ def recommend_movies(movie_name):
 
 
 # Streamlit App
-st.title("Movie Recommendation System)
+st.title("Movie Recommendation System")
 movie_name = st.text_input("Let's recommend based on your favourite movie name")
 if st.button("Get Recommendation"):  # Added button
     if movie_name:
